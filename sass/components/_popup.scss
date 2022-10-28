@@ -10,6 +10,12 @@
   visibility: hidden;
   transition: all .3s;
 
+  @supports((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-black, .3);
+  }
+
   &__content {
     width: 75%;
     background-color: $color-white;
@@ -23,11 +29,20 @@
     display: table;
     opacity: 0;
     transition: all .5s .2s;
+
+    @include respond(tab-land) {
+      display: block;
+    }
   }
 
   &__left {
     width: 33.333333%;
     display: table-cell;
+
+    @include respond(tab-land) {
+      display: inline-block;
+      width: auto;
+    }
   }
 
   &__right {
@@ -35,11 +50,27 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include respond(tab-land) {
+      display: block;
+      width: auto;
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
+
+    @include respond(tab-land) {
+      display: inline-block;
+      width: 45%;
+      padding-left: 8rem;
+    }
+
+    @include respond(phone) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 
   &__text {
