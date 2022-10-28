@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/icon-font.css" />
+    <!-- <link rel="stylesheet" href="css/icon-font.css" /> -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
@@ -25,25 +25,25 @@
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>01</span>About Natours</a>
+            <a href="#section-about" class="navigation__link"><span>01</span>About Natours</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>02</span>Your Benefits</a>
+            <a href="#section-features" class="navigation__link"><span>02</span>Your Benefits</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>03</span>Popular Tours</a>
+            <a href="#section-tours" class="navigation__link"><span>03</span>Popular Tours</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>04</span>Stories</a>
+            <a href="#section-stories" class="navigation__link"><span>04</span>Stories</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>05</span>Book Now</a>
+            <a href="#section-booking" class="navigation__link"><span>05</span>Book Now</a>
           </li>
         </ul>
       </nav>
     </div>
 
-    <header class="header">
+    <header class="header" id="header">
       <div class="header__logo-box">
         <img src="img/logo-white.png" alt="Logo" class="header__logo" />
       </div>
@@ -58,7 +58,7 @@
     </header>
 
     <main>
-      <section class="section-about">
+      <section class="section-about" id="section-about">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">Exciting Tours for adventurous people</h2>
         </div>
@@ -81,15 +81,39 @@
           </div>
           <div class="col-1-of-2">
             <div class="composition">
+              <img
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Photo 1"
+                class="composition__photo composition__photo--p1"
+                src="img/nat-1-large.jpg"
+              />
+              <img
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Photo 2"
+                class="composition__photo composition__photo--p2"
+                src="img/nat-2-large.jpg"
+              />
+              <img
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Photo 3"
+                class="composition__photo composition__photo--p3"
+                src="img/nat-3-large.jpg"
+              />
+
+              <!-- 
               <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1" />
               <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2" />
               <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3" />
+              -->
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section-features">
+      <section class="section-features" id="section-features">
         <div class="row">
           <div class="col-1-of-4">
             <div class="feature-box">
@@ -225,7 +249,8 @@
           <a href="#" class="btn btn--green">Discover All Tours</a>
         </div>
       </section>
-      <section class="section-stories">
+
+      <section class="section-stories" id="section-stories">
         <div class="bg-video">
           <video class="bg-video__content" autoplay muted loop>
             <source src="img/video.mp4" type="video/mp4" />
@@ -272,7 +297,8 @@
           <a href="#" class="btn-text">Read all stories &rarr;</a>
         </div>
       </section>
-      <section class="section-booking">
+
+      <section class="section-booking" id="section-booking">
         <div class="row">
           <div class="book">
             <div class="book__form">
@@ -315,7 +341,14 @@
     </main>
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo" />
+        <picture class="footer__logo">
+          <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)" />
+          <img
+            srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+            alt="Full logo"
+            src="img/logo-green-2x.png"
+          />
+        </picture>
       </div>
       <div class="row">
         <div class="col-1-of-2">
@@ -379,6 +412,8 @@
         </div>
       </div>
     </div>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
 <!-- 
