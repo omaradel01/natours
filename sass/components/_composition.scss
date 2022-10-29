@@ -61,6 +61,10 @@
         outline: 1rem solid $color-primary;
 
       }
+
+      @include respond(phone) {
+        outline: none;
+      }
     }
   }
 
